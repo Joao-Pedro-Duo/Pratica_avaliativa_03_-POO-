@@ -6,6 +6,7 @@ public class CarroEletrico extends Carro {
 	
 	private int nivelBateria;
 
+	// Método Construtor (super) com validação
 	public CarroEletrico(String modelo, int velocidade, int nivelBateria) {
 		super(modelo, velocidade);
 		
@@ -24,6 +25,7 @@ public class CarroEletrico extends Carro {
 		this.nivelBateria = nivelBateria;
 	}
 	
+	// Método consumo de Bateria
 	public int consumoBateria(int valor) {
 		
 		int consumo = (valor / CONSUMO_POR_ACELERACAO);
@@ -31,6 +33,7 @@ public class CarroEletrico extends Carro {
 		
 	}
 	
+	// Método acelerar (sobrescrito) com validação
 	@Override
 	public void acelerar(int valor) {
 		
@@ -51,11 +54,12 @@ public class CarroEletrico extends Carro {
 		
 	}
 	
+	// Método visualizar (sobrescrito)
 	@Override
 	public void visualizar() {
 		
 		super.visualizar();
-		System.out.println("Nivel da Bateria: " + this.nivelBateria);
+		System.out.println("Bateria restante: " + this.nivelBateria + "%");
 		
 	}
 

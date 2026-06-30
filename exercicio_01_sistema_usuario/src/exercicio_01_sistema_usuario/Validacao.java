@@ -2,6 +2,8 @@ package exercicio_01_sistema_usuario;
 
 public class Validacao {
 	
+	// Classe de Validações
+	
 	public static void validarNome(String nome) {
 		if (nome == null || nome.trim().isEmpty())
 			throw new IllegalArgumentException("Nome não pode ser vazio!");

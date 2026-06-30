@@ -28,7 +28,7 @@ public class Notificacao {
 	}
 
 	
-	// Método Enviar com validação
+	// Método enviar com validação
 	public void enviar(String mensagem) {
 		
 		Validacao.validarMensagem(mensagem);

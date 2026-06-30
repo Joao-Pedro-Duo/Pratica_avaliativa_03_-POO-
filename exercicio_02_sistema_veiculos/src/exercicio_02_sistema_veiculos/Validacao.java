@@ -2,6 +2,8 @@ package exercicio_02_sistema_veiculos;
 
 public class Validacao {
 	
+	// Classe de Validações
+	
 	public static void validarAceleracao(int valor) {
 		if (valor <= 0 )
 			throw new IllegalArgumentException("A aceleração só pode ser um número inteiro positivo "

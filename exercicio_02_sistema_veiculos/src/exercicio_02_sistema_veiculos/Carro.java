@@ -5,7 +5,7 @@ public class Carro {
 	private String modelo;
 	private int velocidade;
 	
-	
+	// Método Construtor 
 	public Carro(String modelo, int velocidade) {
 		
 		this.modelo = modelo;
@@ -32,6 +32,7 @@ public class Carro {
 		this.velocidade = velocidade;
 	}
 	
+	// Método acelerar 
 	public void acelerar(int valor) {
 		
 		int velocidadeAtual = getVelocidade();
@@ -42,10 +43,11 @@ public class Carro {
 		
 	}
 	
+	// Método visualizar
 	public void visualizar() {
 		
-		System.out.println("Modelo de Carro: " + this.modelo);
-		System.out.println("Velocidade do Carro: " + this.velocidade);
+		System.out.printf("Modelo do Carro: %s%n", this.modelo);
+		System.out.printf("Velocidade atual: %d km/h%n", this.velocidade);
 		
 	}
 	

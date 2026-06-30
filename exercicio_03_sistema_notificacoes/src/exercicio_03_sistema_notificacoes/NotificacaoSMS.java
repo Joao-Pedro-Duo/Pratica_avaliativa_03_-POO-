@@ -10,7 +10,7 @@ public class NotificacaoSMS extends Notificacao {
 		
 	}
 	
-	// Método Enviar (sobrescrito) com validação
+	// Método enviar (sobrescrito) com validação
 	@Override
 	public void enviar(String mensagem) {
 		

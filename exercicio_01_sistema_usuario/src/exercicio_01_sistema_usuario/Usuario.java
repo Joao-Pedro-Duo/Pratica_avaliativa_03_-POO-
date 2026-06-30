@@ -5,7 +5,7 @@ public class Usuario {
 	private String nome;
 	private String email;
 	
-	
+	// Método Construtor com validação
 	public Usuario(String nome, String email) {
 		
 		Validacao.validarNome(nome);
@@ -37,6 +37,7 @@ public class Usuario {
 		this.email = email;
 	}
 	
+	// Método visualizar 
 	public void visualizar() {
 		
 		System.out.println("Nome: " + this.nome);

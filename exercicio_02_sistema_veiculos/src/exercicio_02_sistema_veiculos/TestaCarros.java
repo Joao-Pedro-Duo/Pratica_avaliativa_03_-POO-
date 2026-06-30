@@ -2,6 +2,7 @@ package exercicio_02_sistema_veiculos;
 
 public class TestaCarros {
 
+	// Classe main para testar os métodos 
 	public static void main(String[] args) {
 		
 		carroEletricovalido();
@@ -15,9 +16,7 @@ public class TestaCarros {
 	static void carroEletricovalido() {
 		System.out.println("\n>>> Caso 1: Carro Elétrico válido");
 		try {
-			CarroEletrico eletricoCarro = new CarroEletrico("Tesla Model 3", 0, 20);
-			eletricoCarro.acelerar(30);
-			eletricoCarro.visualizar();
+			criarCarroEletrico("Tesla model 3", 0, 20, 30);
 		} catch (Exception e) {
 			System.err.println("Erro: " + e.getMessage());
 		}
@@ -26,9 +25,7 @@ public class TestaCarros {
 	static void aceleracaoInvalida() {
 		System.out.println("\n>>> Caso 2: Aceleração Inválida");
 		try {
-			CarroEletrico eletricoCarro = new CarroEletrico("Tesla Model s", 0, 50);
-			eletricoCarro.acelerar(0);
-			eletricoCarro.visualizar();
+			criarCarroEletrico("BYD Dolphin", 0, 50, 0);
 		} catch (Exception e) {
 			System.err.println("Erro: " + e.getMessage());
 		}
@@ -37,9 +34,7 @@ public class TestaCarros {
 	static void bateriaInsuficiente() {
 		System.out.println("\n>>> Caso 3: Bateria Insuficiente");
 		try {
-			CarroEletrico eletricoCarro = new CarroEletrico("Tesla Model s", 0, 5);
-			eletricoCarro.acelerar(30);
-			eletricoCarro.visualizar();
+			criarCarroEletrico("Tesla Model S", 0, 0, 30);
 		} catch (Exception e) {
 			System.err.println("Erro: " + e.getMessage());
 		}
@@ -48,9 +43,7 @@ public class TestaCarros {
 	static void bateriaNegativa() {
 		System.out.println("\n>>> Caso 4: Bateria Negativa");
 		try {
-			CarroEletrico eletricoCarro = new CarroEletrico("Tesla Model s", 0, -10);
-			eletricoCarro.acelerar(30);
-			eletricoCarro.visualizar();
+			criarCarroEletrico("BYD Song", 0, -10, 30);
 		} catch (Exception e) {
 			System.err.println("Erro: " + e.getMessage());
 		}
@@ -59,12 +52,21 @@ public class TestaCarros {
 	static void bateriaMaiorque100() {
 		System.out.println("\n>>> Caso 5: Bateria Maior que 100%");
 		try {
-			CarroEletrico eletricoCarro = new CarroEletrico("Tesla Model s", 0, 150);
-			eletricoCarro.acelerar(10);
-			eletricoCarro.visualizar();
+			criarCarroEletrico("Tesla Model X", 0, 150, 30);
 		} catch (Exception e) {
 			System.err.println("Erro: " + e.getMessage());
 		}
+	}
+	
+	// Método criarCarroEletrico
+	public static void criarCarroEletrico(String modelo, int velocidade, int bateria, int aceleracao) {
+		
+		CarroEletrico carroeletrico = new CarroEletrico(modelo, velocidade, bateria);
+	
+		carroeletrico.acelerar(aceleracao);
+		
+		carroeletrico.visualizar();
+		
 	}
 
 }

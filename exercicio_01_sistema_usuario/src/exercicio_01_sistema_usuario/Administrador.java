@@ -4,6 +4,7 @@ public class Administrador extends Usuario {
 
 	private String nivel_acesso;
 	
+	// Método Construtor (super) com validação
 	public Administrador(String nome, String email, String nivel_acesso) {
 		super(nome, email);
 		
@@ -24,6 +25,7 @@ public class Administrador extends Usuario {
 	}
 	
 	
+	// Método visualizar (sobrescrito) 
 	@Override
 	public void visualizar() {
 		
